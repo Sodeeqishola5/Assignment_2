@@ -1,5 +1,5 @@
-import { Outlet, Link } from "react-router-dom";
-
+import { Outlet, NavLink } from "react-router-dom";
+import './Navigation.css';
 function Navigation() {
   return (
     <>
@@ -7,17 +7,18 @@ function Navigation() {
 <h1>Welcome to AltSchool</h1>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink style={({ isActive }) =>
+          isActive ? { color: 'red' } : { color: 'black' } }to="/" className='navigate'>Home</NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink    style={({ isActive }) =>
+          isActive ? { color: 'red' } : { color: 'black' }}to="/nestedroute" className='navigate'>NestedRoute</NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink    style={({ isActive }) =>
+          isActive ? { color: 'red' } : { color: 'black' }}to="/errorboundary" className='navigate'>ErrorBoundary</NavLink>
           </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
+        
         </ul>
       </nav>
       <Outlet />
