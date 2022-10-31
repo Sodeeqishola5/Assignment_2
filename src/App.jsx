@@ -1,6 +1,7 @@
 import * as React from 'react'
 import './App.css'
 import Home from './pages/Home'
+import ErrorPage from './pages/ErrorPage'
 import NestedRoute from './pages/NestedRoute'
 import ErrorBoundary from './pages/ErrorBoundary'
 import Navigation from './pages/Navigation'
@@ -91,7 +92,11 @@ function App() {
           <Route path="nestedroute" element={<NestedRoute />} />
           <Route path="errorboundary" element={<ErrorBoundary />} />
         </Route>
+        <Route path="*" element={<ErrorPage />} />
+
       </Routes>
+      
+
 
       <div className="App">
       <h1 className="title">List of Users</h1>

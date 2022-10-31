@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ErrorBoundary, useErrorHandler } from 'react-error-boundary';
+import { ErrorBoundary, } from 'react-error-boundary';
 // useErrorHandler
 
 function ErrorFallback({ error, resetErrorBoundary }) {
